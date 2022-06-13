@@ -29,7 +29,7 @@ func ReadFromPipeline() {
 		return
 	}
 
-	if (stat.Mode() & os.ModeNamedPipe) == 0 {
+	if (stat.Mode() & os.ModeNamedPipe) != os.ModeNamedPipe {
 		//here no pipe
 		return
 	}
